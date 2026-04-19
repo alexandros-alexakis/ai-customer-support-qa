@@ -86,15 +86,26 @@ pytest tests/ -v
 
 ## Documentation
 
+**Getting started**
 - [Quickstart](docs/setup/quickstart.md)
-- [Scoring dimensions](docs/guides/scoring-dimensions.md)
-- [Failure pattern library](docs/guides/failure-patterns.md)
-- [CSAT analysis guide](docs/operations/csat-analysis.md)
-- [Coaching framework](docs/operations/coaching-framework.md)
-- [Calibration guide](docs/operations/calibration.md)
-- [Weekly reporting guide](docs/operations/weekly-reporting.md)
-- [Limitations](docs/risk/limitations.md)
-- [Responsible use guide](docs/risk/responsible-use.md)
+
+**Understanding the system**
+- [QA framework](docs/guides/qa-framework.md) - the full scoring model with 5 categories and fatal errors
+- [Scoring dimensions](docs/guides/scoring-dimensions.md) - the 6-dimension automated scorer explained
+- [Failure pattern library](docs/guides/failure-patterns.md) - known failure types with causes and actions
+- [Failure analysis](docs/guides/failure-analysis.md) - 10 detailed failure modes with operational impact and mitigations
+
+**Operations**
+- [CSAT analysis guide](docs/operations/csat-analysis.md) - how to use the CSAT analyser and act on results
+- [CSAT bias analysis](docs/operations/csat-bias-analysis.md) - why comparing AI vs human CSAT directly is misleading
+- [Coaching framework](docs/operations/coaching-framework.md) - how to use coaching output in practice
+- [Coaching template](docs/operations/coaching-template.md) - structured 1:1 session template with sign-off
+- [Calibration guide](docs/operations/calibration.md) - how to align reviewers before scoring begins
+- [Weekly reporting guide](docs/operations/weekly-reporting.md) - how to generate and read the weekly report
+
+**Risk and limits**
+- [Limitations](docs/risk/limitations.md) - what this system cannot do
+- [Responsible use guide](docs/risk/responsible-use.md) - how to use this without causing harm
 
 ---
 
@@ -114,4 +125,4 @@ Vendor Manager and L&D Lead | Player Care
 
 ## Status
 
-Prototype. QA scoring engine, CSAT analyser, responsibility assignment, coaching report generator, and failure pattern library.
+Prototype. QA scoring engine, CSAT analyser, responsibility assignment, coaching report generator, failure pattern library, and full QA framework documentation.

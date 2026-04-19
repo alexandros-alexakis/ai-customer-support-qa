@@ -2,7 +2,11 @@
 
 ## Overview
 
-This document defines the quality assurance framework used to evaluate customer support interactions handled by both the AI agent and human agents. All interactions are scored against the same criteria to ensure consistency.
+This document defines the full quality assurance framework for evaluating gaming support interactions. It is used alongside the automated scorer (`engine/scorer.py`) and applies to both AI-assisted and human-only interactions.
+
+The automated scorer produces a quick 12-point signal across 6 dimensions. This framework is the human review layer: more granular, used for formal QA sampling, coaching, and calibration sessions.
+
+Both use the same principles. The automated scorer is faster. This framework is more detailed.
 
 ---
 
@@ -87,10 +91,24 @@ Each interaction is scored out of 100 points across five categories:
 
 ## Fatal Errors
 
-The following errors result in an automatic score of 0 regardless of other criteria:
+The following result in an automatic score of 0 regardless of other criteria:
 
-- Agent asked player for their password
+- Agent asked the player for their password
 - Agent promised a refund or compensation without authorization
 - Agent disclosed another player's account information
 - Agent used abusive or discriminatory language
 - Agent failed to escalate a security or fraud issue
+
+---
+
+## Relationship to the Automated Scorer
+
+The automated scorer (`engine/scorer.py`) runs the 6-dimension check programmatically and flags obvious failures fast. Use it for high-volume sampling.
+
+Use this framework when:
+- Conducting a formal QA review for coaching
+- Calibrating reviewers before a new scoring cycle
+- Reviewing an interaction that scored borderline on the automated scorer
+- Evaluating an interaction with nuance the automated scorer cannot detect
+
+See [docs/operations/calibration.md](../operations/calibration.md) for how to align reviewers on this framework before scoring begins.

@@ -2,7 +2,9 @@
 
 ## Overview
 
-This template is used to structure coaching conversations following a QA review. Coaching should be conducted within 5 business days of the reviewed interaction.
+This template structures coaching conversations following a QA review. Coaching should be conducted within 5 business days of the reviewed interaction.
+
+Before using this template, check the responsibility output from `run_qa.py`. If the primary failures are system-owned (AI triage, AI KB), fix the system first. This template is for agent-owned failures only.
 
 ---
 
@@ -14,8 +16,11 @@ This template is used to structure coaching conversations following a QA review.
 | Coach name | |
 | Date of session | |
 | Ticket(s) reviewed | |
-| QA score | |
+| Automated QA score (out of 12) | |
+| Full QA score (out of 100, if completed) | |
 | Performance band | |
+| Primary failure type | |
+| Responsibility: agent-owned failures | |
 
 ---
 
@@ -33,6 +38,7 @@ Start with something the agent did well. This is not optional. It sets the tone 
 - Walk through the ticket together, not just the score
 - Ask the agent to narrate their thinking: "What were you trying to do here?"
 - Listen before explaining. The agent may identify the issue themselves.
+- If the automated scorer flagged something, show them what triggered it
 
 ---
 
@@ -41,10 +47,12 @@ Start with something the agent did well. This is not optional. It sets the tone 
 Be specific about what fell below standard and why it matters:
 
 - What specifically happened?
-- Which QA criteria did it affect?
+- Which dimension did it affect?
 - What was the impact on the player?
 
-Avoid vague feedback like "your tone was off." Instead: "In the third message, when the player said they were frustrated, the response moved straight to troubleshooting steps without acknowledging their frustration first. That's what cost points on empathy."
+Avoid vague feedback like "your tone was off." Instead: "In the third message, when the player said they were frustrated, the response moved straight to troubleshooting without acknowledging their frustration first. That's what scored 0 on tone."
+
+If the low score was driven by an AI triage failure, be explicit: "The routing failure here was not your decision. That is a system issue being logged separately. What I want to focus on is the information collection step."
 
 ---
 
@@ -67,7 +75,7 @@ Avoid vague feedback like "your tone was off." Instead: "In the third message, w
 
 ## Coach Notes
 
-Free text for the coach to record observations not captured above.
+Free text for observations not captured above. Note whether any system flags were identified and whether they have been logged in the agent repo issue tracker.
 
 ---
 
