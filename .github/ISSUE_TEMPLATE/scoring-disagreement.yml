@@ -1,0 +1,38 @@
+name: Scoring Disagreement
+description: A dimension score seems wrong for a specific interaction.
+labels: ["scoring-disagreement"]
+body:
+  - type: textarea
+    id: interaction
+    attributes:
+      label: The interaction
+      description: Paste the player message and agent response.
+    validations:
+      required: true
+  - type: dropdown
+    id: dimension
+    attributes:
+      label: Which dimension?
+      options: [correct_routing, information_collection, tone_appropriateness, scope_compliance, accuracy, player_experience]
+    validations:
+      required: true
+  - type: input
+    id: system-score
+    attributes:
+      label: What score did the system give?
+      placeholder: "0, 1, or 2"
+    validations:
+      required: true
+  - type: input
+    id: expected-score
+    attributes:
+      label: What score should it be?
+      placeholder: "0, 1, or 2"
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Why?
+    validations:
+      required: true

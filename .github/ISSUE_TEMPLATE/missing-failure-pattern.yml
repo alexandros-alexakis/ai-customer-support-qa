@@ -1,0 +1,29 @@
+name: Missing Failure Pattern
+description: A real failure type in gaming support not in the failure pattern library.
+labels: ["missing-failure-pattern"]
+body:
+  - type: textarea
+    id: pattern
+    attributes:
+      label: Describe the failure pattern
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example interaction
+    validations:
+      required: false
+  - type: dropdown
+    id: responsibility
+    attributes:
+      label: Who is typically responsible?
+      options: [ai_triage, ai_kb, agent, policy, unavoidable, mixed]
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: What should happen when this pattern is detected?
+    validations:
+      required: true

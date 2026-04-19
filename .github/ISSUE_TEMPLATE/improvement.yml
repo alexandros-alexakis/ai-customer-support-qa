@@ -1,0 +1,29 @@
+name: Improvement
+description: Something that works but could work better.
+labels: ["improvement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What could be improved?
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: How does it currently behave?
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: How should it behave?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [scoring accuracy, csat analysis, coaching quality, reporting, documentation, other]
+    validations:
+      required: true

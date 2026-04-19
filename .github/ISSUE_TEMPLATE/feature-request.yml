@@ -1,0 +1,23 @@
+name: Feature Request
+description: Something the system does not do but should.
+labels: ["feature-request"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What do you want the system to do?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What QA or coaching problem does this solve?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [scoring engine, csat analysis, responsibility assignment, coaching output, reporting, documentation, other]
+    validations:
+      required: true
