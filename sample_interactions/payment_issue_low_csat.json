@@ -1,0 +1,14 @@
+{
+  "ticket_id": "SAMPLE-001",
+  "agent_id": "agent_001",
+  "issue_type": "payment_issue",
+  "player_message": "I was charged 9.99 for coins but they never appeared. Transaction ID: TXN-884521",
+  "agent_response": "Hi! Thanks for reaching out. Sorry to hear about this. Could you send me your player ID and we'll look into it?",
+  "csat_score": 3,
+  "vip_tier": 0,
+  "contact_count": 1,
+  "escalated": false,
+  "escalation_team": null,
+  "player_tone": "neutral",
+  "week": "2024-W15"
+}

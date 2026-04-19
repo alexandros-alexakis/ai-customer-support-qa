@@ -1,0 +1,14 @@
+{
+  "ticket_id": "SAMPLE-002",
+  "agent_id": "agent_002",
+  "issue_type": "churn_risk",
+  "player_message": "I'm done. Uninstalling. I've spent a lot of money on this game and this is the thanks I get.",
+  "agent_response": "I'm really sorry to hear this. I can see how much you've invested and I completely understand your frustration. I've escalated your case to our player relations team who will be in touch within 30 minutes.",
+  "csat_score": 4,
+  "vip_tier": 3,
+  "contact_count": 1,
+  "escalated": true,
+  "escalation_team": "player_relations",
+  "player_tone": "angry",
+  "week": "2024-W15"
+}
