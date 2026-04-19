@@ -11,6 +11,21 @@
 
 ---
 
+## Part of a two-repo toolkit
+
+This repo handles **what comes after the interaction**: scoring, CSAT analysis, and coaching.
+
+The companion repo handles the **intake layer**: triage, escalation, routing, and response strategy.
+
+| Repo | What it does |
+|---|---|
+| [ai-customer-support-agent](https://github.com/alexandros-alexakis/ai-customer-support-agent) | Detects urgency, identifies VIP players, routes to the right team, generates response strategy |
+| [ai-customer-support-qa](https://github.com/alexandros-alexakis/ai-customer-support-qa) (this repo) | Scores interactions, analyses low CSAT, assigns responsibility, generates coaching notes |
+
+The agent produces the interaction. This system evaluates it.
+
+---
+
 ## What this is
 
 A working prototype that takes a support interaction and tells you three things:
@@ -32,20 +47,12 @@ Every score this system produces is a starting point for a human conversation, n
 
 ---
 
-## How it connects to the agent repo
-
-The [ai-customer-support-agent](https://github.com/alexandros-alexakis/ai-customer-support-agent) handles triage, escalation, routing, and response strategy.
-
-This repo handles what comes after: did the interaction go well, why did it go wrong, and what do we do about it.
-
----
-
 ## The responsibility split
 
 | What went wrong | Responsibility | Action |
 |---|---|---|
-| AI triage routed to wrong team | System / AI | Update escalation rules in agent repo |
-| AI gave wrong information | System / KB | Update knowledge base in agent repo |
+| AI triage routed to wrong team | System / AI | Update escalation rules in [agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) |
+| AI gave wrong information | System / KB | Update knowledge base in [agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) |
 | Agent had correct triage but poor response | Agent | Human coaching |
 | Policy made a good outcome impossible | Leadership / Ops | Policy review |
 | Player was always going to be unhappy | None | Document, no action |
@@ -90,10 +97,10 @@ pytest tests/ -v
 - [Quickstart](docs/setup/quickstart.md)
 
 **Understanding the system**
-- [QA framework](docs/guides/qa-framework.md) - the full scoring model with 5 categories and fatal errors
+- [QA framework](docs/guides/qa-framework.md) - full scoring model with 5 categories and fatal errors
 - [Scoring dimensions](docs/guides/scoring-dimensions.md) - the 6-dimension automated scorer explained
 - [Failure pattern library](docs/guides/failure-patterns.md) - known failure types with causes and actions
-- [Failure analysis](docs/guides/failure-analysis.md) - 10 detailed failure modes with operational impact and mitigations
+- [Failure analysis](docs/guides/failure-analysis.md) - 10 detailed failure modes with impact and mitigations
 
 **Operations**
 - [CSAT analysis guide](docs/operations/csat-analysis.md) - how to use the CSAT analyser and act on results
@@ -109,9 +116,16 @@ pytest tests/ -v
 
 ---
 
-## Related
+## When to log issues in the agent repo vs this repo
 
-[ai-customer-support-agent](https://github.com/alexandros-alexakis/ai-customer-support-agent) - The Tier 1 player care AI agent this QA system is designed to evaluate.
+| Issue type | Where to log |
+|---|---|
+| Scorer gave wrong score | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - scoring disagreement template |
+| AI routed a ticket incorrectly | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - escalation misfire template |
+| KB gave wrong or missing information | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - KB gap template |
+| Coaching output seems wrong | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - improvement template |
+| New failure pattern not in library | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - missing failure pattern template |
+| Agent scope violation | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - scope creep template |
 
 ---
 
