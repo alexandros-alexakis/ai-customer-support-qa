@@ -1,3 +1,7 @@
-anthropic>=0.20.0
+# Runtime dependencies
+anthropic>=0.25.0
 python-dotenv>=1.0.0
-pytest>=7.0.0
+
+# Dev dependencies (install separately)
+# pip install pytest>=8.0.0
+# Or: pip install -e '.[dev]'

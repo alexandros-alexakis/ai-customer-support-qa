@@ -10,7 +10,7 @@ Information collection is keyword-based. An agent who collected info verbally bu
 
 Tone scoring is conservative. It detects specific mismatch signals but misses subtler failures. Human review catches what the scorer misses.
 
-Accuracy flags risk, not confirmed inaccuracy. A score of 1 means the response contained language that may suggest unstated policy. Human review is needed to confirm.
+Accuracy flags risk, not confirmed inaccuracy. The accuracy dimension penalises responses containing phrases like "our policy states" or "you are entitled to" because these patterns carry hallucination risk. This is a signal for human review, not a verdict. A response quoting correct policy using formal language may still be flagged. Human review is required to confirm whether the flagged content is actually inaccurate. Do not treat an accuracy score of 1 as proof of hallucination.
 
 ---
 
