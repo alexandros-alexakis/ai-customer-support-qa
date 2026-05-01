@@ -95,24 +95,26 @@ pytest tests/ -v
 
 **Getting started**
 - [Quickstart](docs/setup/quickstart.md)
+- [Setup](docs/setup/setup.md)
+- [Configuration](docs/setup/configuration.md)
 
 **Understanding the system**
-- [QA framework](docs/guides/qa-framework.md) - full scoring model with 5 categories and fatal errors
-- [Scoring dimensions](docs/guides/scoring-dimensions.md) - the 6-dimension automated scorer explained
-- [Failure pattern library](docs/guides/failure-patterns.md) - known failure types with causes and actions
-- [Failure analysis](docs/guides/failure-analysis.md) - 10 detailed failure modes with impact and mitigations
+- [QA framework](docs/guides/qa-framework.md)
+- [Scoring dimensions](docs/guides/scoring-dimensions.md)
+- [Failure pattern library](docs/guides/failure-patterns.md)
+- [Failure analysis](docs/guides/failure-analysis.md)
 
 **Operations**
-- [CSAT analysis guide](docs/operations/csat-analysis.md) - how to use the CSAT analyser and act on results
-- [CSAT bias analysis](docs/operations/csat-bias-analysis.md) - why comparing AI vs human CSAT directly is misleading
-- [Coaching framework](docs/operations/coaching-framework.md) - how to use coaching output in practice
-- [Coaching template](docs/operations/coaching-template.md) - structured 1:1 session template with sign-off
-- [Calibration guide](docs/operations/calibration.md) - how to align reviewers before scoring begins
-- [Weekly reporting guide](docs/operations/weekly-reporting.md) - how to generate and read the weekly report
+- [CSAT analysis guide](docs/operations/csat-analysis.md)
+- [CSAT bias analysis](docs/operations/csat-bias-analysis.md)
+- [Coaching framework](docs/operations/coaching-framework.md)
+- [Coaching template](docs/operations/coaching-template.md)
+- [Calibration guide](docs/operations/calibration.md)
+- [Weekly reporting guide](docs/operations/weekly-reporting.md)
 
 **Risk and limits**
-- [Limitations](docs/risk/limitations.md) - what this system cannot do
-- [Responsible use guide](docs/risk/responsible-use.md) - how to use this without causing harm
+- [Limitations](docs/risk/limitations.md)
+- [Responsible use guide](docs/risk/responsible-use.md)
 
 ---
 
@@ -120,12 +122,12 @@ pytest tests/ -v
 
 | Issue type | Where to log |
 |---|---|
-| Scorer gave wrong score | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - scoring disagreement template |
-| AI routed a ticket incorrectly | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - escalation misfire template |
-| KB gave wrong or missing information | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - KB gap template |
-| Coaching output seems wrong | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - improvement template |
-| New failure pattern not in library | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) - missing failure pattern template |
-| Agent scope violation | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) - scope creep template |
+| Scorer gave wrong score | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) |
+| AI routed a ticket incorrectly | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) |
+| KB gave wrong or missing information | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) |
+| Coaching output seems wrong | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) |
+| New failure pattern not in library | [This repo](https://github.com/alexandros-alexakis/ai-customer-support-qa/issues/new/choose) |
+| Agent scope violation | [Agent repo](https://github.com/alexandros-alexakis/ai-customer-support-agent/issues/new/choose) |
 
 ---
 
